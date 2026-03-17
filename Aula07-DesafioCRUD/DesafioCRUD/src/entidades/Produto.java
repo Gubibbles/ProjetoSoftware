@@ -17,7 +17,17 @@ public class Produto {
 
     public void setQuantidade(int quantidade) {this.quantidade = quantidade;}
 
+    public String getNome(){return nome;}
+
+    public double getPreco(){return preco;}
+
+    public int getQuantidade(){return quantidade;}
+
+    public double getValorTotalEstoque(){
+        return preco * quantidade;
+    }
+
     @Override
-    public String toString(){return " | " + nome + " | " + preco + " | " + quantidade + " | ";}
+    public String toString(){return " | " + nome + " | " + preco + " | " + quantidade + " | " getValorTotalEstoque();}
 }
 
