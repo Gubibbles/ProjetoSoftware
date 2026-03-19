@@ -28,7 +28,6 @@ public class Cachorro  extends Animal {
     @Override
     public String toString() {
         return "Cachorro | " + super.toString() +
-                "raça: " + raca + " | " +
-                " | " ;
+                "raça: " + raca + " | ";
     }
 }
