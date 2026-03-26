@@ -60,6 +60,9 @@ public class ExcecaoTxt {
                         System.out.println("ERRO AO LER ARQUIVO");
                         System.out.println("Detalhe: " + e.getMessage());
                     }
+                    break;
+                case "3":
+                    return;
             }
         }
     }
