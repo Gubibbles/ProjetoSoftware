@@ -1,12 +1,13 @@
 import entidades.Produto;
 import entidades.GerenciarProdutos;
+import entidades.ProdutoEletronico;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        GerenciarProdutos lista = new GerenciarProdutos();
+        GerenciarProdutos gerenciador = new GerenciarProdutos();
 
         Scanner sc = new Scanner(System.in);
 
@@ -32,16 +33,16 @@ public class Main {
                     System.out.println("Digite o quantidade do produto: ");
                     int quantidade = sc.nextInt();
 
-                    Produto produto = new Produto(nome, preco, quantidade);
-                    lista.adicionarProduto(produto);
+                    Produto produto = new ProdutoEletronico(nome, preco, quantidade);
+                    gerenciador.cadastrarProduto(produto);
                 }
 
                 case "2" -> {
-                    lista.listarProdutos();
+                    gerenciador.listarProdutos();
                 }
 
                 case "3" -> {
-                    lista.listarProdutos();
+                    gerenciador.listarProdutos();
                     System.out.println("Digite o ID do produto: ");
                     int id = sc.nextInt();
                     sc.nextLine();
@@ -58,16 +59,16 @@ public class Main {
                     int quantidade = sc.nextInt();
                     sc.nextLine();
 
-                    lista.alterarInformacoesProduto(id, nome, preco, quantidade);
+                    gerenciador.atualizarInformacoesProduto(id, nome, preco, quantidade);
                 }
 
                 case "4" -> {
-                    lista.listarProdutos();
+                    gerenciador.listarProdutos();
                     System.out.println("Digite o ID do produto: ");
                     int id = sc.nextInt();
                     sc.nextLine();
 
-                    lista.removerProduto(id);
+                    gerenciador.removerProduto(id);
                 }
 
                 case "5" -> {
